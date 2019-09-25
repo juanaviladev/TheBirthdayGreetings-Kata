@@ -1,4 +1,4 @@
-# TheBirthdayGreetings-Kotlin-Kata
+# TheBirthdayGreetings-Kata
 Kata about Hexagonal Architecture (also known as Ports & Adapters) written in Kotlin. It is an adaptation of the <a href="https://github.com/xpmatteo/birthday-greetings-kata">original</a>, whose author is Matteo Vaccari
 
 ## ✨ Getting started
