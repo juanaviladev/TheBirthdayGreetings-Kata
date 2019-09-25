@@ -1,4 +1,4 @@
-# FelicitacionesDeAniversario-Kata
+# TheBirthdayGreetings-Kotlin-Kata
 Kata sobre Hexagonal Architecture/Ports &amp; Adapters (Kotlin)
 
 # Licencia
