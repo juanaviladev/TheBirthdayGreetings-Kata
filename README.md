@@ -2,7 +2,9 @@
 Kata about Hexagonal Architecture (also known as Ports & Adapters) written in Kotlin
 
 ## ✨ Getting started
-In this kata we will refactor a tightly coupled, hard to understand, not open to change and not test friendly codebase, apliying Hexagonal Architecture
+In this kata we will refactor a tightly coupled, hard to understand, not open to change and not test friendly codebase, apliying Hexagonal Architecture.
+
+Before starting the kata you should inform yourself about hexagonal architecture through the resources that you will find below.
 
 ## 💡 What does the app do?
 
