@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TheBirthdayGreetings-Kata.iml" filepath="$PROJECT_DIR$/.idea/TheBirthdayGreetings-Kata.iml" />
       <module fileurl="file://$PROJECT_DIR$/legacy-codebase/legacy-codebase.iml" filepath="$PROJECT_DIR$/legacy-codebase/legacy-codebase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/solution/solution.iml" filepath="$PROJECT_DIR$/solution/solution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/suggested-solution/suggested-solution.iml" filepath="$PROJECT_DIR$/suggested-solution/suggested-solution.iml" />
     </modules>
   </component>
 </project>

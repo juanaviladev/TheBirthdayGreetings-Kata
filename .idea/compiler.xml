@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="legacy-codebase" />
-        <module name="solution" />
+        <module name="suggested-solution" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="legacy-codebase" target="1.5" />
-      <module name="solution" target="1.5" />
+      <module name="suggested-solution" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
