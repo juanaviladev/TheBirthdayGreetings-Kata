@@ -7,6 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="legacy-codebase" />
+      </profile>
+      <profile name="Annotation profile for solution" enabled="true">
+        <sourceOutputDir name="../solution/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../solution/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="suggested-solution" />
       </profile>
     </annotationProcessing>
