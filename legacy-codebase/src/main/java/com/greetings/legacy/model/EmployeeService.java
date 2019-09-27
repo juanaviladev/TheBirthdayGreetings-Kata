@@ -1,6 +1,7 @@
 package com.greetings.legacy.model;
 
 import com.greetings.legacy.Config;
+import com.greetings.legacy.utils.Log;
 import org.simplejavamail.email.Email;
 import org.simplejavamail.email.EmailBuilder;
 import org.simplejavamail.mailer.Mailer;
@@ -27,11 +28,12 @@ public class EmployeeService {
         mailer = MailerBuilder
                 .withSMTPServer(Config.SMTP_HOST, Config.SMTP_PORT, Config.MAIL_USER, Config.MAIL_PASS)
                 .withTransportStrategy(TransportStrategy.SMTP_TLS)
-                .withDebugLogging(true)
                 .buildMailer();
     }
 
     public void sendMail(String subject, String body, String to) {
+        Log.d("Sending an email to "+to);
+        
         Email email = EmailBuilder.startingBlank()
                 .from("Greetings Kata","greetings@kata.com")
                 .to(to)
@@ -54,6 +56,9 @@ public class EmployeeService {
                 employees.add(Employee.from(splittedData));
             }
             br.close();
+        }
+        else {
+            Log.d("File does not exists: "+dbFile.getAbsolutePath());
         }
         return employees;
     }
