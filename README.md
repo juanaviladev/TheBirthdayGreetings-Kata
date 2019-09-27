@@ -36,7 +36,7 @@ The application needs to be completely refactored to support these new requireme
 
 The objective is to **isolate the core of the application** and thus be able to share it between the two platforms (web & desktop), **applying hexagonal architecture**. Also, tests of all application components must be performed (you can follow TDD).
 
-**You can use any third-party service or framework** you know to implement the application adapters. **You can even ignore them**, how you know, in hexagonal architecture you can leave those decisions open 😜
+**You can use any third-party service or framework** you know to implement the application adapters. **You can even ignore them**, as you already know, in hexagonal architecture you can leave those decisions open 😜
 
 ## 🎁 A possible solution
 
