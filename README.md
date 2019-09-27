@@ -34,6 +34,8 @@ When it was created, the application **was made as a (old fashioned) Swing deskt
 
 The application needs to be completely refactored to support these new requirements since business logic is mixed with the rest of the app code.
 
+**You can find the app code inside *legacy-codebase* module of this project.**
+
 ## 🏁 What do I have to do?
 
 The objective is to **isolate the core of the application** and thus be able to share it between the two platforms (web & desktop), **applying hexagonal architecture**. Also, tests of all application components must be performed (you can follow TDD).
