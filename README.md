@@ -10,6 +10,8 @@ Before starting the kata you should inform yourself about hexagonal architecture
 
 The core functionality of this application is to congratulate the company's employees on their birthday.
 
+![Legacy app](assets/legacy_app.png "Logo Title Text 1")
+
 Employee data is read from a flat file, employees whose birthday is today are filtered and the application sends them a congratulations message by email.
 
 The flat file is a sequence of records, separated by newlines; this is the format:
