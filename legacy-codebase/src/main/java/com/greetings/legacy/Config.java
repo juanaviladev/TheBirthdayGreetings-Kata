@@ -8,6 +8,6 @@ public class Config {
     public static final int SMTP_PORT = 587;
     public static final String MAIL_USER = ""; //your email here
     public static final String MAIL_PASS = ""; //your pass here
-    public static File employeesDB = new File("employees.db");
+    public static File employeesDB = new File("legacy-codebase/employees.db");
 
 }

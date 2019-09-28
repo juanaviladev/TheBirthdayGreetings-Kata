@@ -8,7 +8,16 @@
       <list>
         <option value="$PROJECT_DIR$/legacy-codebase/pom.xml" />
         <option value="$PROJECT_DIR$/solution/pom.xml" />
+        <option value="$PROJECT_DIR$/suggested-solution/application/pom.xml" />
+        <option value="$PROJECT_DIR$/suggested-solution/desktop/pom.xml" />
+        <option value="$PROJECT_DIR$/suggested-solution/core/pom.xml" />
+        <option value="$PROJECT_DIR$/suggested-solution/web/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-suggested-solution/common-adapters/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-suggested-solution/core/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-suggested-solution/desktop/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-suggested-solution/web/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

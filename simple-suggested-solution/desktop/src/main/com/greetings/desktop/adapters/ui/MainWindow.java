@@ -1,15 +1,15 @@
-package com.greetings.legacy;
+package com.greetings.desktop.adapters.ui;
 
-import com.greetings.legacy.model.Employee;
+import com.greetings.core.usecases.EmployeeDTO;
+import com.greetings.core.usecases.*;
+import com.greetings.desktop.adapters.domain.DesktopGreetingsNotifier;
+import com.greetings.desktop.adapters.domain.PlainTextEmployeeRepository;
+import com.greetings.desktop.adapters.notification.SMTPEmailGateway;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.io.File;
 import java.util.List;
 
 public class MainWindow extends JFrame {
@@ -19,10 +19,10 @@ public class MainWindow extends JFrame {
     private JButton selectDatabaseFileButton;
     private JPanel mainPanel;
     private JButton refreshButton;
-    private MainController controller;
     private DefaultTableModel tableModel;
 
-    public MainWindow() {
+    public MainWindow(FindAll findAll, SendGreetings sendGreetings, StorageSettings storageSettings) {
+
         setTitle("Greetings Kata v1.0");
         setContentPane(mainPanel);
 
@@ -38,43 +38,59 @@ public class MainWindow extends JFrame {
 
         employeesTable.setModel(tableModel);
 
-        controller = new MainController(this);
+        MainController controller = new MainController(this, findAll, sendGreetings, storageSettings);
 
         sendGreetingsButton.addActionListener(controller);
         selectDatabaseFileButton.addActionListener(controller);
         refreshButton.addActionListener(controller);
     }
 
-    public void setEmployees(List<Employee> selectedEmployees) throws ParseException {
+    void showEmployees(List<EmployeeDTO> employees) {
         tableModel.setRowCount(0);
-        for (Employee e : selectedEmployees) {
-            DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
-            Date employeeDate = dateFormat.parse(e.getBirthDate());
+        for (EmployeeDTO it : employees)
+            tableModel.addRow(new Object[]{it.getId(), it.getFirstName(), it.getLastName(), it.getEmail(),
+                    it.getPhoneNumber(), it.getBirthDate(), it.getBirthdayToday() ? "Yes" : "No"});
+    }
 
-            Calendar cal = Calendar.getInstance();
+    void displayNow() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pack();
+        setVisible(true);
+    }
 
-            int actualMonth = cal.get(Calendar.MONTH);
-            int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+    void showErrorMessage(String msg) {
+        JOptionPane.showMessageDialog(this, msg, "Error", JOptionPane.ERROR_MESSAGE);
+    }
 
-            cal.setTime(employeeDate);
+    void showInfoMessage(String msg) {
+        JOptionPane.showMessageDialog(this, msg, "Info", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            int birthMonth = cal.get(Calendar.MONTH);
-            int birthDay = cal.get(Calendar.DAY_OF_MONTH);
 
-            boolean email = actualMonth == birthMonth && birthDay == dayOfMonth;
-            tableModel.addRow(new Object[]{e.getId(), e.getFirstName(), e.getLastName(), e.getEmail(), e.getPhoneNumber(), e.getBirthDate(), email ? "Yes" : "No"});
+    File showFileSelector(File root) {
+        JFileChooser fileChooser = new JFileChooser(root);
+        int option = fileChooser.showOpenDialog(this);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            return fileChooser.getSelectedFile();
         }
+        return null;
     }
 
     public static void main(String[] args) {
-        MainWindow window = new MainWindow();
-        window.displayNow();
-    }
+        StorageSettings storageSettings = new StorageSettings();
+        ;
 
-    private void displayNow() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
-        setVisible(true);
+        PlainTextEmployeeRepository repository = new PlainTextEmployeeRepository(storageSettings);
+        SMTPEmailGateway emailGateway = new SMTPEmailGateway();
+
+        DesktopGreetingsNotifier notifier = new DesktopGreetingsNotifier(emailGateway);
+
+        FindAll findAll = new FindAllUseCase(repository);
+        SendGreetings sendGreetings = new SendGreetingsUseCase(repository, notifier);
+
+        MainWindow window = new MainWindow(findAll, sendGreetings, storageSettings);
+
+        window.displayNow();
     }
 
     {

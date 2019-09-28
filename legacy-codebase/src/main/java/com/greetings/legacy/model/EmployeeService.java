@@ -33,7 +33,7 @@ public class EmployeeService {
 
     public void sendMail(String subject, String body, String to) {
         Log.d("Sending an email to "+to);
-        
+
         Email email = EmailBuilder.startingBlank()
                 .from("Greetings Kata","greetings@kata.com")
                 .to(to)
@@ -43,6 +43,7 @@ public class EmployeeService {
 
         mailer.sendMail(email);
     }
+
 
     public List<Employee> findAll() throws IOException {
         File dbFile = Config.employeesDB;
