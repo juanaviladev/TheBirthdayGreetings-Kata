@@ -3,11 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/TheBirthdayGreetings-Kata.iml" filepath="$PROJECT_DIR$/.idea/TheBirthdayGreetings-Kata.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simple-suggested-solution/common-adapters/common-adapters.iml" filepath="$PROJECT_DIR$/simple-suggested-solution/common-adapters/common-adapters.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simple-suggested-solution/core/core.iml" filepath="$PROJECT_DIR$/simple-suggested-solution/core/core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simple-suggested-solution/desktop/desktop.iml" filepath="$PROJECT_DIR$/simple-suggested-solution/desktop/desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command-bus-suggested-solution/common-adapters/common-adapters.iml" filepath="$PROJECT_DIR$/command-bus-suggested-solution/common-adapters/common-adapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command-bus-suggested-solution/core/core.iml" filepath="$PROJECT_DIR$/command-bus-suggested-solution/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command-bus-suggested-solution/desktop/desktop.iml" filepath="$PROJECT_DIR$/command-bus-suggested-solution/desktop/desktop.iml" />
       <module fileurl="file://$PROJECT_DIR$/legacy-codebase/legacy-codebase.iml" filepath="$PROJECT_DIR$/legacy-codebase/legacy-codebase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simple-suggested-solution/web/web.iml" filepath="$PROJECT_DIR$/simple-suggested-solution/web/web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/command-bus-suggested-solution/web/web.iml" filepath="$PROJECT_DIR$/command-bus-suggested-solution/web/web.iml" />
     </modules>
   </component>
 </project>

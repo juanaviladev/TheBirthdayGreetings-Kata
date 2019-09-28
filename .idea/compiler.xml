@@ -15,7 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common-adapters" target="1.5" />
-      <module name="core" target="1.5" />
+      <module name="core" target="7" />
       <module name="desktop" target="1.5" />
       <module name="legacy-codebase" target="1.5" />
       <module name="web" target="1.8" />
