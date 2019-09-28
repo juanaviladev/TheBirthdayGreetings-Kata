@@ -16,6 +16,10 @@
         <option value="$PROJECT_DIR$/simple-suggested-solution/core/pom.xml" />
         <option value="$PROJECT_DIR$/simple-suggested-solution/desktop/pom.xml" />
         <option value="$PROJECT_DIR$/simple-suggested-solution/web/pom.xml" />
+        <option value="$PROJECT_DIR$/command-bus-suggested-solution/common-adapters/pom.xml" />
+        <option value="$PROJECT_DIR$/command-bus-suggested-solution/core/pom.xml" />
+        <option value="$PROJECT_DIR$/command-bus-suggested-solution/desktop/pom.xml" />
+        <option value="$PROJECT_DIR$/command-bus-suggested-solution/web/pom.xml" />
       </list>
     </option>
   </component>
