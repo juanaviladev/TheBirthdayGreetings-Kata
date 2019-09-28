@@ -48,7 +48,7 @@ The objective is to **isolate the core of the application** and thus be able to 
 
 This solution has 4 modules:
 
-- Core 🥝
+- ####Core 🥝
 
     Core module is the *Hexagon*, it contains the *ports* of our app and it doesn't have
     external dependencies with frameworks or third party services. 
@@ -56,7 +56,7 @@ This solution has 4 modules:
     Inside this module you will find the most important things of our app.
     
     
-- Desktop 📺
+- ####Desktop 📺
 
     Auxiliar module which contains *adapters* related with the Desktop
     app. It depends on Core and Common Adapters module.
@@ -65,7 +65,7 @@ This solution has 4 modules:
     greetings emails. It uses Swing as *driver adapter*.
     
     
-- Web 🌐
+- ####Web 🌐
 
     Auxiliar module which contains *adapters* related with the Web
     app. It depends on Core and Common Adapters module.
