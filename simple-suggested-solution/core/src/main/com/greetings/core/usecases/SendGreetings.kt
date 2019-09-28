@@ -10,7 +10,7 @@ interface SendGreetings {
 }
 
 @AppComponent
-internal class SendGreetingsUseCase(private val employeeRepository: EmployeeRepository,
+class SendGreetingsUseCase(private val employeeRepository: EmployeeRepository,
                     private val greetingsNotifier: GreetingsNotifier)
     : SendGreetings
 {

@@ -8,7 +8,7 @@ interface FindAll {
 }
 
 @AppComponent
-internal class FindAllUseCase(private val employeeRepository: EmployeeRepository) : FindAll {
+class FindAllUseCase(private val employeeRepository: EmployeeRepository) : FindAll {
 
     override fun invoke(params: FindAllRequest): FindAllResponse {
         val employees = employeeRepository.findAll()

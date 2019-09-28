@@ -1,5 +1,7 @@
 package com.greetings.desktop.adapters.ui;
 
+import com.greetings.adapters.logging.ConsoleLogger;
+import com.greetings.core.logging.Logger;
 import com.greetings.core.usecases.EmployeeDTO;
 import com.greetings.core.usecases.*;
 import com.greetings.desktop.adapters.domain.DesktopGreetingsNotifier;
@@ -78,10 +80,11 @@ public class MainWindow extends JFrame {
 
     public static void main(String[] args) {
         StorageSettings storageSettings = new StorageSettings();
-        ;
+
+        Logger logger = new ConsoleLogger();
 
         PlainTextEmployeeRepository repository = new PlainTextEmployeeRepository(storageSettings);
-        SMTPEmailGateway emailGateway = new SMTPEmailGateway();
+        SMTPEmailGateway emailGateway = new SMTPEmailGateway(logger);
 
         DesktopGreetingsNotifier notifier = new DesktopGreetingsNotifier(emailGateway);
 
