@@ -48,36 +48,36 @@ The objective is to **isolate the core of the application** and thus be able to 
 
 This solution has 4 modules:
 
-- ####Core 🥝
+#### Core 🥝
 
-    Core module is the *Hexagon*, it contains the *ports* of our app and it doesn't have
-    external dependencies with frameworks or third party services. 
+Core module is the *Hexagon*, it contains the *ports* of our app and it doesn't have
+external dependencies with frameworks or third party services. 
     
-    Inside this module you will find the most important things of our app.
+Inside this module you will find the most important things of our app.
     
     
-- ####Desktop 📺
+#### Desktop 📺
 
-    Auxiliar module which contains *adapters* related with the Desktop
-    app. It depends on Core and Common Adapters module.
+Auxiliar module which contains *adapters* related with the Desktop
+app. It depends on Core and Common Adapters module.
     
-    Inside this module you will find a SMTP adapter (with Gmail) for sending
-    greetings emails. It uses Swing as *driver adapter*.
+Inside this module you will find a SMTP adapter (with Gmail) for sending
+greetings emails. It uses Swing as *driver adapter*.
     
     
-- ####Web 🌐
+#### Web 🌐
 
-    Auxiliar module which contains *adapters* related with the Web
-    app. It depends on Core and Common Adapters module.
+Auxiliar module which contains *adapters* related with the Web
+app. It depends on Core and Common Adapters module.
     
-    Inside this module you will find a SMS adapter (with Nexmo API) for sending
-    greetings SMS. It uses Spring Boot as *driver adapter*
+Inside this module you will find a SMS adapter (with Nexmo API) for sending
+greetings SMS. It uses Spring Boot as *driver adapter*
     
     
--   Common Adapters 🔌
+#### Common Adapters 🔌
       
-     Auxiliar module which contains *adapters* related with cross-cuting concerns such as Logging.
-     It depends on Core module.
+Auxiliar module which contains *adapters* related with cross-cuting concerns such as Logging.
+It depends on Core module.
 
 ## 🧰 Useful resources
 
