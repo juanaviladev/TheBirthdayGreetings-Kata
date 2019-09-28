@@ -17,8 +17,8 @@ Employee data is read from a flat file, employees whose birthday is today are fi
 The flat file is a sequence of records, separated by newlines; this is the format:
 
 ```
-Doe, John, 1982/10/08, john.doe@foobar.com,+34666777111
-Ann, Mary, 1975/09/11, mary.ann@foobar.com,+34688777111
+1, Doe, John, 1982/10/08, john.doe@foobar.com,+34666777111
+2, Ann, Mary, 1975/09/11, mary.ann@foobar.com,+34688777111
 ```
 
 The greetings message contains the following:
@@ -42,10 +42,42 @@ The objective is to **isolate the core of the application** and thus be able to 
 
 **You can use any third-party service or framework** you know to implement the application adapters. **You can even ignore them**, as you already know, in hexagonal architecture you can leave those decisions open 😜
 
-## 🎁 A possible solution
+## 🎁 Simple solution
 
-🚧 Under construction 🚧
+**You can find the solution code inside *simple-suggested-solution* folder of this project.**
 
+This solution has 4 modules:
+
+- Core 🥝
+
+    Core module is the *Hexagon*, it contains the *ports* of our app and it doesn't have
+    external dependencies with frameworks or third party services. 
+    
+    Inside this module you will find the most important things of our app.
+    
+    
+- Desktop 📺
+
+    Auxiliar module which contains *adapters* related with the Desktop
+    app. It depends on Core and Common Adapters module.
+    
+    Inside this module you will find a SMTP adapter (with Gmail) for sending
+    greetings emails. It uses Swing as *driver adapter*.
+    
+    
+- Web 🌐
+
+    Auxiliar module which contains *adapters* related with the Web
+    app. It depends on Core and Common Adapters module.
+    
+    Inside this module you will find a SMS adapter (with Nexmo API) for sending
+    greetings SMS. It uses Spring Boot as *driver adapter*
+    
+    
+-   Common Adapters 🔌
+      
+     Auxiliar module which contains *adapters* related with cross-cuting concerns such as Logging.
+     It depends on Core module.
 
 ## 🧰 Useful resources
 
